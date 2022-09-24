@@ -14,7 +14,9 @@
           <a href="index.html" class="semibold">BetterLMS</a>
         </li>
         <li class="nav-item right">
-          <button class="button">Sign in with a PowerUI account</button>
+          <button class="button" onclick="openModal('signIn');">
+            Sign in with a PowerUI account
+          </button>
         </li>
       </ul>
     </div>
@@ -95,6 +97,44 @@
           </div>
         </li>
       </ul>
+    </div>
+    <div class="modal" id="signIn">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="title">Sign in with PowerUI Cloud</p>
+        <p class="subtitle">
+          Continue to BetterLMS by signing in to PowerUI Cloud.
+        </p>
+        <br />
+        <p class="subtitle">Username</p>
+        <br />
+        <input type="name" placeholder="Username" id="username" /><br /><br />
+        <p class="subtitle">Password</p>
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+        /><br /><br />
+        <br />
+        <button class="button" onclick="signIn()" id="submitLogin">
+          Sign in
+        </button>
+      </div>
+    </div>
+    <div class="modal" id="success">
+      <div class="modal-content">
+        <span class="close">&times</span>
+        <p class="title">Successfully signed in</p>
+        <p class="subtitle">You're now signed into BetterLMS.</p>
+      </div>
+    </div>
+    <div class="modal" id="error">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="title">Wrong password</p>
+        <p class="subtitle">You entered a wrong password. Please try again.</p>
+      </div>
     </div>
   </body>
   <script src="scripts/tranchui.js"></script>
