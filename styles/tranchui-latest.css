@@ -1,26 +1,26 @@
 @font-face {
   font-family: SegoeUIVariable;
-  src: url("fonts/Segoe-UI-Variable-Static-Display.ttf");
+  src: url("../fonts/Segoe-UI-Variable-Static-Display.ttf");
 }
 
 @font-face {
   font-family: SegoeUIVariableBold;
-  src: url("fonts/Segoe-UI-Variable-Static-Display-Bold.ttf");
+  src: url("../fonts/Segoe-UI-Variable-Static-Display-Bold.ttf");
 }
 
 @font-face {
   font-family: SegoeUIVariableLight;
-  src: url("fonts/Segoe-UI-Variable-Static-Display-Light.ttf");
+  src: url("../fonts/Segoe-UI-Variable-Static-Display-Light.ttf");
 }
 
 @font-face {
   font-family: SegoeUIVariableSemibold;
-  src: url("fonts/Segoe-UI-Variable-Static-Display-Semibold.ttf");
+  src: url("../fonts/Segoe-UI-Variable-Static-Display-Semibold.ttf");
 }
 
 @font-face {
   font-family: SegoeUIVariableSemilight;
-  src: url("fonts/Segoe-UI-Variable-Static-Display-Semilight.ttf");
+  src: url("../fonts/Segoe-UI-Variable-Static-Display-Semilight.ttf");
 }
 
 html,
