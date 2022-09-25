@@ -2,6 +2,17 @@ document.onscroll = function () {
   appearCards("features");
 };
 
+async function checkSession() {
+  var result = await authenticateUser(
+    getCookie("username"),
+    getCookie("password")
+  );
+
+  if (result != "Password's valid!") {
+    window.location.href = "index.html";
+  }
+}
+
 async function signIn() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -17,9 +28,16 @@ async function signIn() {
     openModal("success");
     submit.innerHTML = "Sign in";
     submit.setAttribute("onclick", "signIn();");
+    setCookie("username", username);
+    setCookie("password", password);
   } else if (result == "Password's not valid") {
     closeModal("signIn");
     openModal("error");
+    submit.innerHTML = "Sign in";
+    submit.setAttribute("onclick", "signIn();");
+  } else if (result == "Not a valid user") {
+    closeModal("signIn");
+    openModal("nonExistentUser");
     submit.innerHTML = "Sign in";
     submit.setAttribute("onclick", "signIn();");
   }
